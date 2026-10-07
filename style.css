@@ -205,3 +205,11 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   .focus-row { grid-template-columns: 1fr; }
   .job { padding: 26px; }
 }
+
+/* hero cutout */
+.cutout-wrap{position:relative;z-index:1;display:flex;justify-content:center;align-items:flex-end;align-self:end}
+.cutout-circle{position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:min(400px,92%);aspect-ratio:1;border-radius:50%;background:var(--lime)}
+.hero-photo.cutout{border:0;border-radius:0 0 28px 28px;max-height:600px;object-fit:contain;position:relative;width:auto;max-width:100%}
+.hero-panel{padding-bottom:0}
+.hero-text{padding-bottom:72px}
+@media(max-width:900px){.hero-text{padding-bottom:0}.hero-photo.cutout{max-height:460px}}
