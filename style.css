@@ -181,35 +181,74 @@ h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 800; max-width: 760px; 
 footer { padding: 48px 0; color: var(--muted); font-size: .9rem; }
 footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
+/* hero cutout */
+.cutout-wrap { position: relative; z-index: 1; display: flex; justify-content: center; align-items: flex-end; align-self: end; }
+.cutout-circle { position: absolute; top: -24px; left: 50%; transform: translateX(-50%); width: min(400px, 92%); aspect-ratio: 1; border-radius: 50%; background: var(--lime); }
+.hero-photo.cutout { border: 0; border-radius: 0 0 28px 28px; max-height: 600px; object-fit: contain; position: relative; width: auto; max-width: 100%; }
+.hero-panel { padding-bottom: 0; }
+.hero-text { padding-bottom: 72px; }
+.about-grid { margin-top: 24px; }
+.chips li { border-radius: 18px; }
+
+/* accessibility */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; border-radius: 8px; }
+.skill-box a:focus-visible, .about-card a:focus-visible { outline-color: var(--green-2); }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* large screens */
+@media (min-width: 1440px) {
+  .wrap { max-width: 1280px; }
+  .hero-panel { padding-left: 88px; padding-right: 88px; }
+  body { font-size: 1.05rem; }
+}
+@media (min-width: 1900px) {
+  .wrap { max-width: 1440px; }
+  body { font-size: 1.15rem; }
+}
+
+/* tablets and below */
 @media (max-width: 900px) {
-  .hero-panel { padding: 40px 24px; border-radius: 32px; grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .hero h1 { font-size: clamp(2rem, 9vw, 3.4rem); overflow-wrap: anywhere; }
+  .hero-panel { padding: 48px 28px 0; border-radius: 32px; gap: 28px; }
+  .hero h1 { font-size: clamp(2rem, 6.2vw, 3.4rem); overflow-wrap: anywhere; }
   .hero-text, .hero-photo { min-width: 0; max-width: 100%; }
-  .hero-photo { max-height: 420px; }
+  .hero-text { padding-bottom: 48px; }
+  .hero-photo.cutout { max-height: 460px; }
   .focus-row { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .job { grid-template-columns: 1fr; gap: 20px; }
   .skill-grid { grid-template-columns: 1fr; }
   .contact-panel { padding: 56px 24px; border-radius: 32px; }
   section { padding-top: 72px; }
 }
+
+/* phones */
 @media (max-width: 720px) {
+  .hero-panel { grid-template-columns: minmax(0, 1fr); padding: 40px 24px 0; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 3.4rem); }
+  .hero-text { padding-bottom: 0; }
+  .theme-btn, .menu-btn { width: 44px; height: 44px; }
   .menu-btn { display: block; }
   nav {
     display: none; position: absolute; top: 68px; left: 0; right: 0;
-    flex-direction: column; align-items: flex-start; gap: 16px;
+    flex-direction: column; align-items: flex-start; gap: 18px;
     padding: 20px 24px; background: var(--bg); border-bottom: 1px solid var(--line);
   }
+  nav a { padding: 4px 0; }
   nav.open { display: flex; }
+  .btn { padding: 14px 24px; }
 }
 @media (max-width: 480px) {
+  .wrap { padding: 0 16px; }
   .focus-row { grid-template-columns: 1fr; }
-  .job { padding: 26px; }
+  .job, .edu, .about-card, .skill-box { padding: 24px; }
+  .hero-panel { padding: 32px 20px 0; border-radius: 28px; }
+  .contact-panel { padding: 44px 20px; border-radius: 28px; }
+  .cta .btn { width: 100%; justify-content: center; }
+  .contact-panel .btn { font-size: .84rem; padding: 14px 12px; overflow-wrap: normal; text-align: center; }
+  section { padding-top: 60px; }
 }
-
-/* hero cutout */
-.cutout-wrap{position:relative;z-index:1;display:flex;justify-content:center;align-items:flex-end;align-self:end}
-.cutout-circle{position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:min(400px,92%);aspect-ratio:1;border-radius:50%;background:var(--lime)}
-.hero-photo.cutout{border:0;border-radius:0 0 28px 28px;max-height:600px;object-fit:contain;position:relative;width:auto;max-width:100%}
-.hero-panel{padding-bottom:0}
-.hero-text{padding-bottom:72px}
-@media(max-width:900px){.hero-text{padding-bottom:0}.hero-photo.cutout{max-height:460px}}
+@media (max-width: 360px) {
+  .hero h1 { font-size: 1.9rem; }
+  .logo { font-size: 1.2rem; }
+}
