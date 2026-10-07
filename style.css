@@ -170,6 +170,12 @@ h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 800; max-width: 760px; 
 .contact-panel p { color: rgba(248,246,237,.78); max-width: 520px; margin: 0 auto 32px; font-size: 1.1rem; }
 .contact-panel .cta { justify-content: center; }
 
+.social-links { list-style: none; padding: 0; margin: 36px 0 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.social-links a {
+  display: inline-block; padding: 8px 18px; border-radius: 999px; text-decoration: none; font-size: .95rem;
+  background: rgba(248,246,237,.1); color: var(--cream);
+}
+.social-links a:hover { background: var(--lime); color: var(--green); }
 footer { padding: 48px 0; color: var(--muted); font-size: .9rem; }
 footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
