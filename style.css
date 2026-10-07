@@ -135,6 +135,7 @@ h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 800; max-width: 760px; 
 .job h3 { font-size: 1.5rem; }
 .job .org { color: var(--green-2); font-weight: 600; margin: 8px 0 0; }
 :root[data-theme="dark"] .job .org { color: var(--lime); }
+.job .date { color: var(--muted); font-size: .9rem; margin: 6px 0 0; }
 .job .org a { text-decoration: underline; text-underline-offset: 3px; }
 .job ul { margin: 0; padding-left: 20px; color: var(--muted); }
 .job li { margin-bottom: 6px; }
