@@ -257,7 +257,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--lime); outline-
 
 /* inner pages */
 .page { padding-top: 40px; padding-bottom: 40px; max-width: 860px; }
-.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 28px; }
+.crumbs { display: block; font-size: .9rem; color: var(--muted); margin-bottom: 28px; }
 .crumbs a { text-decoration: underline; text-underline-offset: 3px; }
 .page-title { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; margin: 0 0 18px; }
 .byline { color: var(--muted); margin: 0 0 32px; }
