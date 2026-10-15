@@ -47,7 +47,23 @@
       "about": {
         "@id": "https://saifulislam.business/#person"
       },
-      "inLanguage": "en"
+      "inLanguage": "en",
+      "mainEntity": {
+        "@id": "https://saifulislam.business/#person"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://saifulislam.business/#photo"
+      },
+      "dateModified": "2026-10-15"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://saifulislam.business/#photo",
+      "url": "https://saifulislam.business/images/saiful-profile.jpg",
+      "contentUrl": "https://saifulislam.business/images/saiful-profile.jpg",
+      "width": 600,
+      "height": 600,
+      "caption": "Saiful Islam, Business Development Manager"
     },
     {
       "@type": "Person",
@@ -59,7 +75,9 @@
         "saifulb410"
       ],
       "url": "https://saifulislam.business/",
-      "image": "https://saifulislam.business/images/og-image.png",
+      "image": {
+        "@id": "https://saifulislam.business/#photo"
+      },
       "jobTitle": "Business Development Manager",
       "description": "Business Development & Operations professional with a technical CSE background, working across partnerships, fintech and customer experience.",
       "nationality": {
@@ -96,7 +114,11 @@
         "https://www.fiverr.com/sellers/saifulb410",
         "https://github.com/saifulb410",
         "https://t.me/saifulb410"
-      ]
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Business Development Manager"
+      }
     },
     {
       "@type": "Organization",
