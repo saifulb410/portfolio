@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.saifulislam.business"
+        }
+      ],
+      "destination": "https://saifulislam.business/$1",
+      "permanent": true
+    }
+  ]
+}
